@@ -39,5 +39,5 @@ InvisPlugin uses flag permission: @css/invis
 ```
 ### To change
 
--Player still visible on minimap
--C4 yellow light slightly visible
+- Player still visible on minimap
+- C4 yellow light slightly visible
