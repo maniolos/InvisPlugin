@@ -13,7 +13,7 @@ public class InvisPlugin : BasePlugin
 {
     public override string ModuleName => "InvisPlugin";
 
-    public override string ModuleVersion => "0.1.0";
+    public override string ModuleVersion => "0.1.1";
     public override string ModuleAuthor => "Manio";
     public override string ModuleDescription => "Invisibility plugin";
 
@@ -28,8 +28,8 @@ public class InvisPlugin : BasePlugin
         Console.WriteLine("|   | |  _    ||       ||   | |_____  |    |    ___||   |___ |       ||   ||  ||   | |  _    |");
         Console.WriteLine("|   | | | |   | |     | |   |  _____| |    |   |    |       ||       ||   |_| ||   | | | |   |");
         Console.WriteLine("|___| |_|  |__|  |___|  |___| |_______|    |___|    |_______||_______||_______||___| |_|  |__|");
-        Console.WriteLine("					               	>> Version: 0.1.0");
-        Console.WriteLine("			          >> GitHub: https://github.com/maniolos/Cs2Invis");
+        Console.WriteLine("			     >> Version: 0.1.1");
+        Console.WriteLine("		>> GitHub: https://github.com/maniolos/Cs2Invis");
         Console.WriteLine(" ");
     }
     [ConsoleCommand("css_invis", "Invisible command")]
@@ -102,14 +102,14 @@ public class InvisPlugin : BasePlugin
 
         if (playerPawnValue != null && playerPawnValue.IsValid)
         {
-            playerPawnValue.Render = Color.FromArgb(0, 0, 0, 0);
+            playerPawnValue.Render = Color.FromArgb(0, 255, 255, 255);
             Utilities.SetStateChanged(playerPawnValue, "CBaseModelEntity", "m_clrRender");
         }
 
         var activeWeapon = playerPawnValue!.WeaponServices?.ActiveWeapon.Value;
         if (activeWeapon != null && activeWeapon.IsValid)
         {
-            activeWeapon.Render = Color.FromArgb(0, 0, 0, 0);
+            activeWeapon.Render = Color.FromArgb(0, 255, 255, 255);
             activeWeapon.ShadowStrength = 0.0f;
             Utilities.SetStateChanged(activeWeapon, "CBaseModelEntity", "m_clrRender");
         }
@@ -122,7 +122,7 @@ public class InvisPlugin : BasePlugin
                 var weapon = gun.Value;
                 if (weapon != null)
                 {
-                    weapon.Render = Color.FromArgb(0, 0, 0, 0);
+                    weapon.Render = Color.FromArgb(0, 255, 255, 255);
                     weapon.ShadowStrength = 0.0f;
                     Utilities.SetStateChanged(weapon, "CBaseModelEntity", "m_clrRender");
                 }
