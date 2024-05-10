@@ -3,7 +3,7 @@
 
 Makes a player invisible, intended for customgames
 
-Made for CounterStrike sharp
+Made for CounterStrikeSharp
 
 
 ## Do you appreciate what I do? Buy me a coffee ❤️
